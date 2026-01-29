@@ -516,7 +516,10 @@ body {
 
 .checkbox-option input,
 .radio-option input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .checkbox-custom,
@@ -566,6 +569,7 @@ body {
 
 .other-option {
     flex-wrap: wrap;
+    position: relative;
 }
 
 .other-input {
@@ -577,16 +581,27 @@ body {
     font-family: inherit;
     margin-left: auto;
     font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .other-input:disabled {
     background: var(--bg-color);
     cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.other-input:enabled {
+    background: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .other-input:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
 
 /* ===== FORM ACTIONS ===== */
