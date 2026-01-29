@@ -568,40 +568,77 @@ body {
 }
 
 .other-option {
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     position: relative;
+    gap: 10px;
+}
+
+.other-checkbox-wrapper,
+.other-radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.other-checkbox-wrapper input,
+.other-radio-wrapper input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.other-option .checkbox-label,
+.other-option .radio-label {
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .other-input {
     flex: 1;
-    min-width: 140px;
-    padding: 8px 10px;
-    border: 1px solid var(--border-color);
+    min-width: 120px;
+    padding: 8px 12px;
+    border: 2px solid var(--border-color);
     border-radius: var(--radius-sm);
     font-family: inherit;
-    margin-left: auto;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    position: relative;
-    z-index: 2;
+    background: white;
 }
 
 .other-input:disabled {
     background: var(--bg-color);
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: 0.6;
+    border-color: var(--border-color);
 }
 
 .other-input:enabled {
     background: white;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .other-input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Checkbox option selected state */
+.checkbox-option:has(input:checked),
+.radio-option:has(input:checked) {
+    border-color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* Textarea in question card */
+.question-card textarea {
+    margin-top: 4px;
 }
 
 /* ===== FORM ACTIONS ===== */
@@ -838,6 +875,22 @@ footer {
     .btn-submit {
         width: 100%;
         justify-content: center;
+    }
+    
+    /* Checkbox & radio options responsive */
+    .checkbox-option,
+    .radio-option {
+        padding: 12px;
+    }
+    
+    .other-option {
+        flex-wrap: wrap;
+    }
+    
+    .other-input {
+        width: 100%;
+        flex: 0 0 100%;
+        margin-top: 8px;
     }
 }
 

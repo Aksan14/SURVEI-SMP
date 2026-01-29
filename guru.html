@@ -174,12 +174,14 @@
                                 <span class="checkbox-custom"></span>
                                 <span class="checkbox-label">Aplikasi / website pembelajaran</span>
                             </label>
-                            <label class="checkbox-option other-option">
+                            <label class="checkbox-option">
                                 <input type="checkbox" name="q3" value="Lainnya" id="q3Other">
                                 <span class="checkbox-custom"></span>
-                                <span class="checkbox-label">Lainnya:</span>
-                                <input type="text" class="other-input" id="q3OtherText" placeholder="Sebutkan..." disabled>
+                                <span class="checkbox-label">Lainnya</span>
                             </label>
+                            <div class="other-input-wrapper" id="q3OtherWrapper" style="display: none; margin-top: 10px; padding-left: 10px;">
+                                <input type="text" class="other-input" id="q3OtherText" placeholder="Sebutkan media lainnya..." style="width: 100%; padding: 12px; border: 2px solid #2563eb; border-radius: 8px; font-size: 14px;">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,11 +265,18 @@
 
     <script src="js/app.js"></script>
     <script>
-        // Enable/disable other input field
-        document.getElementById('q3Other').addEventListener('change', function() {
-            document.getElementById('q3OtherText').disabled = !this.checked;
+        // Show/hide other input field for q3
+        const q3OtherCheckbox = document.getElementById('q3Other');
+        const q3OtherWrapper = document.getElementById('q3OtherWrapper');
+        const q3OtherText = document.getElementById('q3OtherText');
+        
+        q3OtherCheckbox.addEventListener('change', function() {
             if (this.checked) {
-                document.getElementById('q3OtherText').focus();
+                q3OtherWrapper.style.display = 'block';
+                q3OtherText.focus();
+            } else {
+                q3OtherWrapper.style.display = 'none';
+                q3OtherText.value = '';
             }
         });
 
