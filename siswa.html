@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survei Siswa - Pembelajaran Bahasa Indonesia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </div>
+
+        <div class="form-header">
+            <div class="header-icon siswa-icon">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <h1>Survei untuk Siswa</h1>
+            <p>Silakan lengkapi data dan jawab pertanyaan berikut dengan jujur</p>
+        </div>
+
+        <form id="siswaForm" class="survey-form">
+            <!-- Bagian Identitas -->
+            <div class="form-section">
+                <div class="section-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h2>Data Identitas</h2>
+                </div>
+                <p class="section-desc">Informasi ini digunakan untuk memastikan keaslian data</p>
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nis">NIS / NISN <span class="required">*</span></label>
+                        <input type="text" id="nis" name="nis" required placeholder="Masukkan NIS atau NISN">
+                    </div>
+                    <div class="form-group">
+                        <label for="kelas">Kelas <span class="required">*</span></label>
+                        <input type="text" id="kelas" name="kelas" required placeholder="Contoh: VII-A, VIII-B, IX-C">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sekolah">Nama Sekolah <span class="required">*</span></label>
+                        <input type="text" id="sekolah" name="sekolah" required placeholder="Nama sekolah Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="jenisKelamin">Jenis Kelamin <span class="required">*</span></label>
+                        <select id="jenisKelamin" name="jenisKelamin" required>
+                            <option value="">Pilih jenis kelamin</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bagian Kuesioner -->
+            <div class="form-section">
+                <div class="section-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h2>Kuesioner</h2>
+                </div>
+                <p class="section-desc">Jawablah pertanyaan berikut sesuai dengan pengalaman kamu</p>
+
+                <!-- Pertanyaan 1 -->
+                <div class="question-card">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p class="question-text">Saya sering merasa kesulitan memahami pelajaran Bahasa Indonesia.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q1" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q1" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q1" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q1" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q1" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 2 -->
+                <div class="question-card">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p class="question-text">Jumlah siswa di kelas mempengaruhi kesempatan saya untuk mendapat penjelasan dari guru.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q2" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q2" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q2" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q2" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q2" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 3 -->
+                <div class="question-card">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p class="question-text">Media apa yang paling sering digunakan guru dalam pembelajaran Bahasa Indonesia?</p>
+                        <div class="radio-options vertical">
+                            <label class="radio-option">
+                                <input type="radio" name="q3" value="Papan tulis & buku" required>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Papan tulis & buku</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="q3" value="PowerPoint / proyektor">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">PowerPoint / proyektor</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="q3" value="Video pembelajaran">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Video pembelajaran</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="q3" value="Aplikasi / website pembelajaran">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Aplikasi / website pembelajaran</span>
+                            </label>
+                            <label class="radio-option other-option">
+                                <input type="radio" name="q3" value="Lainnya" id="q3Other">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Lainnya:</span>
+                                <input type="text" class="other-input" id="q3OtherText" placeholder="Sebutkan..." disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 4 -->
+                <div class="question-card">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p class="question-text">Saat saya tidak paham, saya mudah mendapatkan bantuan atau penjelasan dari guru.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q4" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q4" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q4" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q4" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q4" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 5 -->
+                <div class="question-card">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p class="question-text">Menurut saya, penggunaan aplikasi/AI akan membantu saya memahami pelajaran Bahasa Indonesia.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q5" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q5" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q5" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q5" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q5" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 6 -->
+                <div class="question-card">
+                    <div class="question-number">6</div>
+                    <div class="question-content">
+                        <p class="question-text">Saya merasa lebih berani mencoba menjawab jika ada media digital/aplikasi sebagai perantara.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q6" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q6" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q6" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q6" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q6" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 7 -->
+                <div class="question-card">
+                    <div class="question-number">7</div>
+                    <div class="question-content">
+                        <p class="question-text">Saya sering merasa takut salah saat mengerjakan tugas atau menjawab di kelas Bahasa Indonesia.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q7" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q7" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q7" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q7" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q7" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 8 -->
+                <div class="question-card">
+                    <div class="question-number">8</div>
+                    <div class="question-content">
+                        <p class="question-text">Guru memberikan tanggapan yang membantu ketika jawaban saya kurang tepat.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q8" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q8" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q8" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q8" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q8" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 9 -->
+                <div class="question-card">
+                    <div class="question-number">9</div>
+                    <div class="question-content">
+                        <p class="question-text">Saya merasa aman dan nyaman saat belajar Bahasa Indonesia.</p>
+                        <div class="scale-container">
+                            <span class="scale-label">Sangat Tidak Setuju</span>
+                            <div class="scale-options">
+                                <label class="scale-option">
+                                    <input type="radio" name="q9" value="1" required>
+                                    <span class="scale-number">1</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q9" value="2">
+                                    <span class="scale-number">2</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q9" value="3">
+                                    <span class="scale-number">3</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q9" value="4">
+                                    <span class="scale-number">4</span>
+                                </label>
+                                <label class="scale-option">
+                                    <input type="radio" name="q9" value="5">
+                                    <span class="scale-number">5</span>
+                                </label>
+                            </div>
+                            <span class="scale-label">Sangat Setuju</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Kirim Jawaban
+                </button>
+            </div>
+        </form>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Mengirim data...</p>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <div class="modal-icon success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Terima Kasih!</h3>
+                <p>Jawaban kamu telah berhasil disimpan. Terima kasih atas partisipasimu dalam penelitian ini.</p>
+                <button class="btn-modal" onclick="goHome()">Kembali ke Beranda</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Penelitian Pembelajaran Bahasa Indonesia | SMP</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Enable/disable other input field
+        document.getElementById('q3Other').addEventListener('change', function() {
+            document.getElementById('q3OtherText').disabled = !this.checked;
+            if (this.checked) {
+                document.getElementById('q3OtherText').focus();
+            }
+        });
+
+        // Disable other input when other options are selected
+        document.querySelectorAll('input[name="q3"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                if (this.id !== 'q3Other') {
+                    document.getElementById('q3OtherText').disabled = true;
+                    document.getElementById('q3OtherText').value = '';
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('siswaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitSiswaForm();
+        });
+    </script>
+</body>
+</html>

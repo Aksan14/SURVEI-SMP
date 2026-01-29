@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survei Pembelajaran Bahasa Indonesia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h1>Survei Pembelajaran Bahasa Indonesia</h1>
+            <p class="subtitle">Penelitian tentang efektivitas pembelajaran dan penggunaan teknologi AI dalam pembelajaran Bahasa Indonesia</p>
+        </div>
+
+        <div class="role-selection">
+            <h2>Silakan pilih peran Anda</h2>
+            <p class="instruction">Klik salah satu kartu di bawah untuk melanjutkan ke formulir survei</p>
+            
+            <div class="cards-container">
+                <div class="role-card" onclick="selectRole('guru')">
+                    <div class="card-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Guru</h3>
+                    <p>Saya adalah guru Bahasa Indonesia</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="role-card" onclick="selectRole('siswa')">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Siswa</h3>
+                    <p>Saya adalah siswa SMP</p>
+                    <div class="card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Penelitian Pembelajaran Bahasa Indonesia | SMP</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
